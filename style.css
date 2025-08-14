@@ -2,10 +2,15 @@ body{
     background-color: bisque;
     text-align: center;
 
+
 }
 .titulo{
     font-size: 50px;
     color: rgb(154, 179, 170);
+}
+.titulo3{
+    font-size: 20px;
+    color: black;
 }
 .imagem{
     list-style-type:none;
@@ -40,7 +45,14 @@ body{
     color: brown;
 }
 .formacao{
+    font-size: 20px;
     list-style-type:none ;
+}
+.texto{
+    font-size: 20px;
+    color:black;
+    text-align: justify;
+    
 }
 
 @media screen and (max-width: 768px) {
