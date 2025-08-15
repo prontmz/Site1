@@ -35,12 +35,56 @@
   .titulo {
     font-size: 100px; 
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    transition :transform 0.3s ease;
+    display: inline-block;
   }
+  .titulo:hover {
+    transform: translateY(-5px); /* move pra cima 5px */
+}
+  .span{
+    font-style: italic;
+    
+  }
+  .button{
+    background-color: #a4a6b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none; /* remove underline */
+    
+  }
+  
+.button:hover {
+    transform: scale(1.1); /* aumenta um pouco o botão */
+    background-color: #e7bda1; /* muda a cor */
+}
 
- 
+ @media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .circular {
+        width: 150px;  
+        height: 150px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; 
+    }
+
+    nav ul li a {
+        padding: 10px 15px; 
+    }
+}
+
 
   
-  @media (max-width: 480px) {
-    header { height: 220px; }
-    header h1 { font-size: 1.5rem; }
-  }
+ 
