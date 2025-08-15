@@ -13,6 +13,7 @@ body{
     text-align: center;
     font-size: 20px;
     color: black;
+    margin: 0 15px;
 }
 .flopp{
     text-align: center;
@@ -27,6 +28,7 @@ body{
 
 
 }
+
 .imagem1{
     width: 200px;
     height: 200px;
@@ -62,13 +64,23 @@ body{
     
     
 }
+.red{
+    color: rgb(163, 104, 104);
+    font-size: 60px;
+}
+.container-card{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .card{
     background-color: #818a62;
     border: 1px solid #7a82ad;
     border-radius: 8px;
     padding: 20px;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 768px) {
