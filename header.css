@@ -1,98 +1,113 @@
-body{
-    background-color:beige;
-    
+body {
+    background-color: beige;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* HEADER */
 header {
-    position: relative;          /* cria o contexto para posicionar a imagem */
-    height: 600px;               /* dá altura ao cabeçalho */
-    display: flex;               /* facilita centralizar o conteúdo */
-    align-items: center;         /* centra vertical */
-    justify-content: center;     /* centra horizontal */
+    position: relative;
+    min-height: 100vh; /* ocupa toda a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #fff;
     padding: 0 16px;
-    overflow: hidden;            /* corta sobras da imagem */
-  }
+    overflow: hidden;
+}
 
-  header img.imagem1 {
+/* IMAGEM DE FUNDO */
+header img.imagem1 {
     position: absolute;
-    inset: 0;                    /* top/right/bottom/left = 0 */
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;           /* cobre todo o header sem deformar */
-    filter: brightness(0.45);    /* escurece a imagem para o texto aparecer melhor */
-    z-index: 0;                  /* fica por baixo do texto */
-  }
-
-
-
-  header .overlay {
-    position: relative;
-    z-index: 1;                  /* fica por cima da imagem */
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* melhora a leitura */
-  }
-  .overlay h1 {
-    margin: 0 0 16px;            
-    color:   #ffffff80;
-            
-  }
-  .titulo {
-    font-size: 100px; 
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    transition :transform 0.3s ease;
-    display: inline-block;
-  }
-  .titulo:hover {
-    transform: translateY(-5px); /* move pra cima 5px */
+    object-fit: cover;
+    filter: brightness(0.45);
+    z-index: 0;
 }
-.texto:hover {
-    transform: translateY(-2.5px); /* move pra cima 5px */
+
+/* SOBREPOSIÇÃO DE TEXTO */
+header .overlay {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+}
+
+/* TÍTULO */
+.overlay h1 {
+    margin: 0 0 16px;
     color: #ffffff80;
 }
+
+.titulo {
+    font-size: 5rem; /* tamanho proporcional */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.titulo:hover {
+    transform: translateY(-5px);
+}
+
+/* TEXTO */
 .texto {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #ffffff80;
     margin-top: 10px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
-  .span{
+
+.texto:hover {
+    transform: translateY(-2.5px);
+    color: #ffffffb3;
+}
+
+/* BOTÃO */
+.span {
     font-style: italic;
-    
-  }
-  .button{
+}
+
+.button {
     background-color: #a4a6b3;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
-    text-decoration: none; /* remove underline */
-    
-  }
-  
-.button:hover {
-    transform: scale(1.1); /* aumenta um pouco o botão */
-    background-color: #e7bda1; /* muda a cor */
-    transition: translateY(-5px); /* suaviza a transição */
+    font-size: 1.125rem;
+    margin-top: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.button:hover {
+    transform: scale(1.1);
+    background-color: #e7bda1;
+}
+
+/* TABLET */
 @media (max-width: 768px) {
     .titulo {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .texto {
         font-size: 1rem;
     }
     .button {
         padding: 10px 20px;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
+/* TELEMÓVEL */
 @media (max-width: 480px) {
     .titulo {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .texto {
         font-size: 0.9rem;
@@ -102,7 +117,3 @@ header {
         font-size: 0.85rem;
     }
 }
-
-
-  
- 
