@@ -1,4 +1,8 @@
- header {
+body{
+    background-color:beige;
+    
+}
+header {
     position: relative;          /* cria o contexto para posicionar a imagem */
     height: 600px;               /* dá altura ao cabeçalho */
     display: flex;               /* facilita centralizar o conteúdo */
@@ -41,6 +45,16 @@
   .titulo:hover {
     transform: translateY(-5px); /* move pra cima 5px */
 }
+.texto:hover {
+    transform: translateY(-2.5px); /* move pra cima 5px */
+    color: #ffffff80;
+}
+.texto {
+    font-size: 20px;
+    color: #ffffff80;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
   .span{
     font-style: italic;
     
@@ -60,28 +74,32 @@
 .button:hover {
     transform: scale(1.1); /* aumenta um pouco o botão */
     background-color: #e7bda1; /* muda a cor */
+    transition: translateY(-5px); /* suaviza a transição */
 }
 
- @media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column; 
-        align-items: center;
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
     }
-
-    .circular {
-        width: 150px;  
-        height: 150px;
+    .texto {
+        font-size: 1rem;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px; 
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5rem;
     }
-
-    nav ul li a {
-        padding: 10px 15px; 
+    .texto {
+        font-size: 0.9rem;
+    }
+    .button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
     }
 }
 
